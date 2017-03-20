@@ -7,11 +7,11 @@ function modulo(divident, divisor) {
         var cChar = divident[i];
         var cOperator = cRest + '' + cDivident + '' + cChar;
 
-        if ( cOperator < parseInt(divisor) ) {
+        if (cOperator < parseInt(divisor)) {
                 cDivident += '' + cChar;
         } else {
             cRest = cOperator % divisor;
-            if ( cRest == 0 ) {
+            if (cRest == 0) {
                 cRest = '';
             }
             cDivident = '';
@@ -20,7 +20,7 @@ function modulo(divident, divisor) {
     
     cRest += '' + cDivident;
 
-    if ( cRest == '' ) {
+    if (cRest == '') {
         cRest = 0;
     }
 
@@ -40,10 +40,10 @@ function validateLEI(leiCode) {
 
     for (var i = 0; i < 20; i++) {
         var acode = code.charCodeAt(i);
-        if ( (acode >= 65) && (acode <= 90) ) {
+        if ((acode >= 65) && (acode <= 90)) {
             acode -= 55;
             computedCode += acode;
-        } else if ( (acode >= 48) && (acode <= 57) ) {
+        } else if ((acode >= 48) && (acode <= 57)) {
             acode -= 48;
             computedCode += acode;
         } else {
