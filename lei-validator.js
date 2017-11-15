@@ -40,7 +40,6 @@ function validateLEI(leiCode) {
         return false;
     }
     
-
     var computedCode = '';
 
     for (var i = 0; i < 20; i++) {
