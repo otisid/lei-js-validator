@@ -36,6 +36,11 @@ function validateLEI(leiCode) {
 
     code = code.toUpperCase();
 
+    if (code.match(/(00|01|99)$/)) {
+        return false;
+    }
+    
+
     var computedCode = '';
 
     for (var i = 0; i < 20; i++) {
